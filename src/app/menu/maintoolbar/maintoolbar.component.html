@@ -1,0 +1,31 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" 
+      aria-label="Example icon-button with menu icon"
+      [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+    </button>
+    <span>Shelly homee</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>wifi_off</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>wifi</mat-icon>
+        <span>WLAN-Konfiguration</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>smart_button</mat-icon>
+        <span>Button-Konfiguration</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>developer_mode</mat-icon>
+        <span>Debugging</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+</p>

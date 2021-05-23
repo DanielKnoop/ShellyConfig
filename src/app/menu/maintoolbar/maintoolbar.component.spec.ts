@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainmenuComponent } from './mainmenu.component';
+import { MaintoolbarComponent } from './maintoolbar.component';
 
 describe('MainmenuComponent', () => {
-  let component: MainmenuComponent;
-  let fixture: ComponentFixture<MainmenuComponent>;
+  let component: MaintoolbarComponent;
+  let fixture: ComponentFixture<MaintoolbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainmenuComponent ]
+      declarations: [ MaintoolbarComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainmenuComponent);
+    fixture = TestBed.createComponent(MaintoolbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

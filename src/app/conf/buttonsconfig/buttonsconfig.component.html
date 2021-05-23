@@ -1,0 +1,8 @@
+<mat-slide-toggle [(ngModel)]="enable">Enable</mat-slide-toggle>
+<div *ngIf="enable" >
+    <mat-card >
+        <mat-radio-group [(ngModel)]="buttonType">
+            <mat-radio-button *ngFor="let t of buttonTypes" [value]="t">{{t}}</mat-radio-button>
+        </mat-radio-group>
+    </mat-card>
+</div>

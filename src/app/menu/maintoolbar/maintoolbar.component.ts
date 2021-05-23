@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mainmenu',
-  templateUrl: './mainmenu.component.html',
-  styleUrls: ['./mainmenu.component.css']
+  templateUrl: './maintoolbar.component.html',
+  styleUrls: ['./maintoolbar.component.css']
 })
-export class MainmenuComponent implements OnInit {
+export class MaintoolbarComponent implements OnInit {
 
   constructor() { }
 

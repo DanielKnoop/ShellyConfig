@@ -1,0 +1,12 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.example-icon {
+    border-width: 0;
+    background-color: rgba(0,0,0,0);
+    color:whitesmoke;
+}
+
+.favorite-icon {
+  color: red;
+}

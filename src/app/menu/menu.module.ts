@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MainmenuComponent } from './mainmenu/mainmenu.component';
+import { MaintoolbarComponent } from './maintoolbar/maintoolbar.component';
 import { MatSliderModule } from '@angular/material/slider';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu'
 @NgModule({
   declarations: [
-    MainmenuComponent
+    MaintoolbarComponent
   ],
   imports: [
     CommonModule,
-    MatSliderModule
+    MatSliderModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [
-    MainmenuComponent
+    MaintoolbarComponent
   ]
 })
 export class MenuModule { }

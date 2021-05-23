@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "gzipper": "gzipper",
-    "compress": "gzipper compress ./dist"
+    "compress": "gzipper compress ./dist",
+    "buildcpp": "xxd -i runtime.js.gz | sed 's/unsigned char \b([^=]*\b)/#include <pgmspace.h>\nconst unsigned char \b1 PROGMEM /'"
   },
   "private": true,
   "dependencies": {
