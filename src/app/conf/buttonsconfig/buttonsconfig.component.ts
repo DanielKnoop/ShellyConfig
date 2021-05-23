@@ -13,6 +13,6 @@ export class ButtonsconfigComponent implements OnInit {
   }
 
   enable: boolean = false
-  buttonType: string = "push";
-  buttonTypes: string[] = ["push","toggle"]
+  buttonType: Number = 1;
+  buttonTypes = new Map([[1, 'Taster'], [2, 'Schalter']]);
 }
