@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuModule } from './menu/menu.module';
 import { ConfModule } from './conf/conf.module';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -15,9 +17,13 @@ import { ConfModule } from './conf/conf.module';
     BrowserModule,
     BrowserAnimationsModule ,
     MenuModule,
-    ConfModule
+    ConfModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
