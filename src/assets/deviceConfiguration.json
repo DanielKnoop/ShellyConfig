@@ -1,0 +1,26 @@
+{
+    "inputType": 
+    [
+        {
+            "id": 1,
+            "type": 0,
+            "enabled": true,
+            "doubleClickEnabled": true,
+            "longClickEnabled": true
+        },
+        {
+            "id": 2,
+            "type": 0,
+            "enabled": false,
+            "doubleClickEnabled": true,
+            "longClickEnabled": true
+        },
+        {
+            "id": 3,
+            "type": 1,
+            "enabled": true,
+            "doubleClickEnabled": false,
+            "longClickEnabled": false
+        }
+    ]
+}

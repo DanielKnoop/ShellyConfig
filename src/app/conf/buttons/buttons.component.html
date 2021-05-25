@@ -1,30 +1,10 @@
-<mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Button 1
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <app-buttonsconfig></app-buttonsconfig>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Button 2
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <app-buttonsconfig></app-buttonsconfig>
-    </mat-expansion-panel>
-  </mat-accordion>
-  <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Button 3
-        </mat-panel-title>
-      </mat-expansion-panel-header>
-      <app-buttonsconfig></app-buttonsconfig>
-    </mat-expansion-panel>
-  </mat-accordion>
+<mat-accordion *ngFor="let input of deviceConfiguration?.inputType"> 
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Button {{input.id}}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-buttonsconfig [inputType]="input"></app-buttonsconfig>
+  </mat-expansion-panel>
+</mat-accordion>

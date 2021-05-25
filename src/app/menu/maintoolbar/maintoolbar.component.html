@@ -13,12 +13,12 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>wifi_off</mat-icon>
     </button>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+    <mat-menu #menu="matMenu" >
+      <button mat-menu-item routerLink="/wlan">
         <mat-icon>wifi</mat-icon>
         <span>WLAN-Konfiguration</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item routerLink="/device">
         <mat-icon>list</mat-icon>
         <span>Button-Konfiguration</span>
       </button>

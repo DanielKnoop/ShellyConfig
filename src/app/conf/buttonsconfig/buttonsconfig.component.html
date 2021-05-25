@@ -1,13 +1,23 @@
-<mat-slide-toggle [(ngModel)]="enable">Enable</mat-slide-toggle>
-<div *ngIf="enable" >
+<mat-slide-toggle class="button-type" [(ngModel)]="inputType.enabled">Enable</mat-slide-toggle>
+<div *ngIf="inputType.enabled" >
     <mat-card >
         <mat-card-title>Buttontyp</mat-card-title>
         <mat-card-content>
-            <mat-radio-group [(ngModel)]="buttonType">
-            <span class="button-type" *ngFor="let type of buttonTypes | keyvalue" >
-                <mat-radio-button [value]="type.key">{{type.value}}</mat-radio-button>
-            </span>
-            </mat-radio-group>
+            <div>
+                <mat-radio-group [(ngModel)]="inputType.type">
+                    <span class="button-type" *ngFor="let type of buttonTypes | keyvalue" >
+                        <mat-radio-button [value]="type.key">{{type.value}}</mat-radio-button>
+                    </span>
+                </mat-radio-group>
+            </div>
+            <div *ngIf="inputType.type == 0" class="button-type" >
+                <section>
+                <mat-slide-toggle [(ngModel)]="inputType.doubleClickEnabled">Doppelklick</mat-slide-toggle>
+            </section>
+            <section>
+                <mat-slide-toggle [(ngModel)]="inputType.longClickEnabled">Langer Klick</mat-slide-toggle>
+            </section>
+            </div>
         </mat-card-content>
     </mat-card>
 </div>
