@@ -10,12 +10,14 @@ import { MatCardModule } from '@angular/material/card'
 import { FormsModule } from '@angular/forms'
 import { MatRadioModule } from '@angular/material/radio'
 import { HttpClientModule } from '@angular/common/http';
+import { DebugComponent } from './debug/debug.component';
 
 @NgModule({
   declarations: [
     WlanComponent,
     ButtonsComponent,
-    ButtonsconfigComponent
+    ButtonsconfigComponent,
+    DebugComponent
   ],
   imports: [
     CommonModule,
