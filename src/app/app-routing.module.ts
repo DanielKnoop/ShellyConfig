@@ -6,10 +6,12 @@ import { WlanComponent } from './conf/wlan/wlan.component';
 import { ConfModule } from './conf/conf.module';
 import { ButtonsComponent } from './conf/buttons/buttons.component';
 import { ButtonsconfigComponent } from './conf/buttonsconfig/buttonsconfig.component';
+import { DebugComponent } from './conf/debug/debug.component';
 
 const routes: Routes = [
   { path: 'wlan', component: WlanComponent },
-  { path: 'device', component: ButtonsComponent }
+  { path: 'device', component: ButtonsComponent },
+  { path: 'debug', component: DebugComponent },
 ]
 
 @NgModule({
