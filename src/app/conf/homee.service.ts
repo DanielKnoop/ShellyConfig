@@ -17,4 +17,9 @@ export class HomeeService {
   getConfig() {
     return this.http.get<DeviceConfiguration>(this.configUrl);
   }
+
+  safeConfig(deviceConfig: DeviceConfiguration) {
+    this.http.put(this.configUrl, deviceConfig);
+  }
+
 }

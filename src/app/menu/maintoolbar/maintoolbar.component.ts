@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { Component, OnInit} from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { EventsService } from '../events.service';
 
 const MENU_ITEM = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>`;
 const SAVE_ITEM = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"/></svg>`;
@@ -9,7 +10,6 @@ const WIFI_ITEM = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="
 const LIST_ITEM = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>`;
 const WARNING_ITEM = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>`;
 
-
 @Component({
   selector: 'app-mainmenu',
   templateUrl: './maintoolbar.component.html',
@@ -17,16 +17,20 @@ const WARNING_ITEM = `<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBo
 })
 export class MaintoolbarComponent implements OnInit {
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private eventService: EventsService) {
     iconRegistry.addSvgIconLiteral('menu', sanitizer.bypassSecurityTrustHtml(MENU_ITEM));
     iconRegistry.addSvgIconLiteral('save', sanitizer.bypassSecurityTrustHtml(SAVE_ITEM));
     iconRegistry.addSvgIconLiteral('wifi_off', sanitizer.bypassSecurityTrustHtml(WIFI_OFF_ITEM));
     iconRegistry.addSvgIconLiteral('wifi', sanitizer.bypassSecurityTrustHtml(WIFI_ITEM));
     iconRegistry.addSvgIconLiteral('list', sanitizer.bypassSecurityTrustHtml(LIST_ITEM));
     iconRegistry.addSvgIconLiteral('warning', sanitizer.bypassSecurityTrustHtml(WARNING_ITEM));
-}
+  }
 
   ngOnInit(): void {
+  }
+
+  saveButton(): void {
+    this.eventService.saveClick();
   }
 
 }
