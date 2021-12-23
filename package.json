@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-hashing=none && npm run gzipper compress ./dist ./gzipped",
+    "build": "ng build --output-hashing=none && npm run gzipper compress ./dist ./gzipped && npm run buildcpp",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "gzipper": "gzipper",
