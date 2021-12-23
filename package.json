@@ -9,7 +9,7 @@
     "test": "ng test",
     "gzipper": "gzipper",
     "compress": "gzipper compress ./dist",
-    "buildcpp": "xxd -i runtime.js.gz | sed 's/unsigned char \b([^=]*\b)/#include <pgmspace.h>\nconst unsigned char \b1 PROGMEM /'"
+    "buildcpp": "for file in gzipped/shelly-config/*.gz; do xxd -i $file | sed 's/unsigned char \\([^=]\\)/#include <pgmspace.h>\\nconst unsigned char \\1 PROGMEM /' > ./include_files/$(basename $file).h; done;"
   },
   "private": true,
   "dependencies": {
