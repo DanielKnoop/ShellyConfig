@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms'
 import { MatRadioModule } from '@angular/material/radio'
 import { HttpClientModule } from '@angular/common/http';
 import { DebugComponent } from './debug/debug.component';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DebugComponent } from './debug/debug.component';
     MatCardModule,
     FormsModule,
     MatRadioModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   exports: [
     WlanComponent,

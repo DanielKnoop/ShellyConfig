@@ -9,4 +9,5 @@ export class InputType {
     enabled: boolean = false
     doubleClickEnabled: boolean = false
     longClickEnabled: boolean = false
+    gpio: number = 0
 }

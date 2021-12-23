@@ -1,1 +1,8 @@
 <p>wlan works!</p>
+<button (click)="startScanTimer()">Start scanning</button>
+<button (click)="stopScanTimer()">Stop scanning</button>
+<mat-selection-list #wlans [multiple]="false">
+    <mat-list-option *ngFor="let wlan of listOfWlans?.wlanList" [value]="wlan">
+        {{wlan.ssid}}
+    </mat-list-option>
+</mat-selection-list>
